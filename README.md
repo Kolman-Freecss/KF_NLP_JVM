@@ -50,11 +50,17 @@ You can automate the build and deployment process using **Jenkins**. The **Jenki
 
 7. Running the Application Locally**
 
+- Create an `application-sensitive.properties` with the following content:
+
+```properties
+huggingface.api.token=YOUR_HUGGING_FACE_API_KEY
+
+## All the other stuff inside application.properties
+```
+
 You can also run the application locally without Docker or Kubernetes:
 
-```bash
-java -jar target/my-app.jar
-```
+Start the Spring Boot application with the file inside `.run` (it have configured spring.profiles.active=sensitivew)
 
 ### **9. API Usage**
 

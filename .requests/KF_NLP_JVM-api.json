@@ -1,0 +1,274 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "/api/analyze",
+    "description": "",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080/"
+    }
+  ],
+  "tags": [
+    {
+      "name": "/api/analyze",
+      "description": ""
+    }
+  ],
+  "paths": {
+    "/api/analyze": {
+      "post": {
+        "tags": [
+          "/api/analyze"
+        ],
+        "summary": "POST/api/analyze",
+        "operationId": "analyzeText",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringResponseEntity"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "HttpHeaders": {
+        "type": "object",
+        "properties": {
+          "ACCEPT": {
+            "type": "string"
+          },
+          "ACCEPT_CHARSET": {
+            "type": "string"
+          },
+          "ACCEPT_ENCODING": {
+            "type": "string"
+          },
+          "ACCEPT_LANGUAGE": {
+            "type": "string"
+          },
+          "ACCEPT_PATCH": {
+            "type": "string"
+          },
+          "ACCEPT_RANGES": {
+            "type": "string"
+          },
+          "ACCESS_CONTROL_ALLOW_CREDENTIALS": {
+            "type": "string"
+          },
+          "ACCESS_CONTROL_ALLOW_HEADERS": {
+            "type": "string"
+          },
+          "ACCESS_CONTROL_ALLOW_METHODS": {
+            "type": "string"
+          },
+          "ACCESS_CONTROL_ALLOW_ORIGIN": {
+            "type": "string"
+          },
+          "ACCESS_CONTROL_EXPOSE_HEADERS": {
+            "type": "string"
+          },
+          "ACCESS_CONTROL_MAX_AGE": {
+            "type": "string"
+          },
+          "ACCESS_CONTROL_REQUEST_HEADERS": {
+            "type": "string"
+          },
+          "ACCESS_CONTROL_REQUEST_METHOD": {
+            "type": "string"
+          },
+          "AGE": {
+            "type": "string"
+          },
+          "ALLOW": {
+            "type": "string"
+          },
+          "AUTHORIZATION": {
+            "type": "string"
+          },
+          "CACHE_CONTROL": {
+            "type": "string"
+          },
+          "CONNECTION": {
+            "type": "string"
+          },
+          "CONTENT_ENCODING": {
+            "type": "string"
+          },
+          "CONTENT_DISPOSITION": {
+            "type": "string"
+          },
+          "CONTENT_LANGUAGE": {
+            "type": "string"
+          },
+          "CONTENT_LENGTH": {
+            "type": "string"
+          },
+          "CONTENT_LOCATION": {
+            "type": "string"
+          },
+          "CONTENT_RANGE": {
+            "type": "string"
+          },
+          "CONTENT_TYPE": {
+            "type": "string"
+          },
+          "COOKIE": {
+            "type": "string"
+          },
+          "DATE": {
+            "type": "string"
+          },
+          "ETAG": {
+            "type": "string"
+          },
+          "EXPECT": {
+            "type": "string"
+          },
+          "EXPIRES": {
+            "type": "string"
+          },
+          "FROM": {
+            "type": "string"
+          },
+          "HOST": {
+            "type": "string"
+          },
+          "IF_MATCH": {
+            "type": "string"
+          },
+          "IF_MODIFIED_SINCE": {
+            "type": "string"
+          },
+          "IF_NONE_MATCH": {
+            "type": "string"
+          },
+          "IF_RANGE": {
+            "type": "string"
+          },
+          "IF_UNMODIFIED_SINCE": {
+            "type": "string"
+          },
+          "LAST_MODIFIED": {
+            "type": "string"
+          },
+          "LINK": {
+            "type": "string"
+          },
+          "LOCATION": {
+            "type": "string"
+          },
+          "MAX_FORWARDS": {
+            "type": "string"
+          },
+          "ORIGIN": {
+            "type": "string"
+          },
+          "PRAGMA": {
+            "type": "string"
+          },
+          "PROXY_AUTHENTICATE": {
+            "type": "string"
+          },
+          "PROXY_AUTHORIZATION": {
+            "type": "string"
+          },
+          "RANGE": {
+            "type": "string"
+          },
+          "REFERER": {
+            "type": "string"
+          },
+          "RETRY_AFTER": {
+            "type": "string"
+          },
+          "SERVER": {
+            "type": "string"
+          },
+          "SET_COOKIE": {
+            "type": "string"
+          },
+          "SET_COOKIE2": {
+            "type": "string"
+          },
+          "TE": {
+            "type": "string"
+          },
+          "TRAILER": {
+            "type": "string"
+          },
+          "TRANSFER_ENCODING": {
+            "type": "string"
+          },
+          "UPGRADE": {
+            "type": "string"
+          },
+          "USER_AGENT": {
+            "type": "string"
+          },
+          "VARY": {
+            "type": "string"
+          },
+          "VIA": {
+            "type": "string"
+          },
+          "WARNING": {
+            "type": "string"
+          },
+          "WWW_AUTHENTICATE": {
+            "type": "string"
+          },
+          "EMPTY": {
+            "$ref": "#/components/schemas/HttpHeaders"
+          }
+        }
+      },
+      "?HttpEntity": {
+        "type": "object",
+        "properties": {
+          "EMPTY": {
+            "$ref": "#/components/schemas/?HttpEntity"
+          },
+          "headers": {
+            "$ref": "#/components/schemas/HttpHeaders"
+          },
+          "body": {
+            "type": "?"
+          }
+        }
+      },
+      "StringResponseEntity": {
+        "type": "object",
+        "properties": {
+          "EMPTY": {
+            "$ref": "#/components/schemas/?HttpEntity"
+          },
+          "headers": {
+            "$ref": "#/components/schemas/HttpHeaders"
+          },
+          "body": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
