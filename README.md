@@ -2,6 +2,15 @@
 
 This project demonstrates how to build a simple **Java** backend application using **Spring Boot** that integrates a Natural Language Processing (NLP) model for sentiment analysis via a REST API. The application is containerized using **Docker** and deployed to **Kubernetes**. Continuous Integration/Continuous Deployment (CI/CD) is handled by **Jenkins**.
 
+## **Technologies Used**
+- **Java** (Spring Boot)
+- **Docker**
+- **Kubernetes**
+- **Jenkins**
+- **Hugging Face API**
+  - **Transformers** library for NLP tasks.
+    - **DistilBERT** model for sentiment analysis.
+
 ## **Features**
 - **REST API** built with **Spring Boot** to process NLP tasks.
 - **Docker** containerization for easy deployment.
@@ -89,13 +98,6 @@ curl -X POST http://localhost:8080/api/analyze \
 - **deployment.yaml**: Kubernetes deployment configuration.
 - **Jenkinsfile**: Pipeline configuration for Jenkins.
 - **run.sh**: Script for manual build and deployment.
-
-## **Technologies Used**
-- **Java** (Spring Boot)
-- **Docker**
-- **Kubernetes**
-- **Jenkins**
-- **Hugging Face API**
 
 ## **Future Improvements**
 - Add more advanced NLP tasks like text summarization or classification.
